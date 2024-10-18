@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemoweb</title>
-    <script src="/htmx.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
 </head>
 <body>
-    
+    <nav class="bg-white h-20 w-full flex items-center justify-between fixed">
+        <img src="/public/logo.png" class="h-5/6 mx-5">
+        <div class="h-full w-5/6 mx-5 hidden lg:flex items-center justify-between">
+            <div class="w-full flex justify-end">
+                <div class="w-4/5 max-w-2xl flex justify-between">
+                    <a class="text-lg font-bold mx-auto" href="#screen-1">Página Inicial</a>
+                    <a class="text-lg font-bold mx-auto" href="#screen-2">Sobre nós</a>
+                    <a class="text-lg font-bold mx-auto" href="#screen-3">Porque doar?</a>
+                    <a class="text-lg font-bold mx-auto" href="#screen-4">Hemocentros</a>
+                    <a class="text-lg font-bold mx-auto" href="#screen-5">Contato</a>
+                </div>
+            </div>
+            <a href="login.html">
+                <button class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full">CADASTRE-SE</button>
+            </a>
+        </div>
+    </nav>
+    <section id="screen-1" class="bg-[#cfe9ff] h-fit pt-20 pt-32">
+        <div class="h-full w-full max-w-6xl mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:mx-auto px-5 lg:py-10">
+                <h1 class="text-5xl font-bold">Uma plataforma de unificação dos serviços de doação do Hemominas</h1>
+                <h2 class="text-2xl mt-2">Uma nova forma de ajudar a salvar vidas!</h2>
+                <a href="login.html">
+                    <button class="bg-[#075091] w-56 mt-5 h-10 text-white font-bold rounded-full hover:bg-[#063d73]">
+                        CADASTRE-SE
+                    </button>
+                </a>
+            </div>
+            <div class="w-full flex justify-start">
+                <div class="flex items-center justify-center">
+                    <img src="/public/doctor.png" class="h-full">
+                </div>
+            </div>       
+         </div>
+    </section>
+    <section id="screen-2" class="bg-[#075091] h-screen"></section>
 </body>
 </html>
