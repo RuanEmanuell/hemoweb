@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Criar conta</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,20 +15,24 @@
 </head>
 
 <body class="bg-gradient-to-b from-blue-600 to-[#075091] h-screen w-full flex justify-center items-center">
-    <form id="loginForm" class="bg-white h-128 w-80 md:h-172 md:w-112 flex flex-col justify-center items-center rounded">
-        <h1 class="text-3xl md:text-5xl font-bold mb-10">LOGIN</h1>
+    <form id="createAccountForm" class="bg-white h-128 w-80 md:w-112 md:h-172 rounded flex flex-col justify-center items-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-10">CRIAR CONTA</h1>
+        <p class="w-3/4">Nome</p>
+        <input id="nameInput" type="text" required minlength="2" class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
         <p class="w-3/4">CPF</p>
         <input id="cpfInput" type="tel" required minlength="11" maxlength="11" class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
+        <p class="w-3/4">E-mail</p>
+        <input id="emailInput" type="email" required class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
         <p class="w-3/4">Senha</p>
-        <div class="w-3/4 mb-5 relative">
-            <input id="passwordInput" type="password" required
+        <div class="relative w-3/4 mb-5">
+            <input id="passwordInput" type="password" required minlength="6"
                 class="w-full border-b-2 focus:border-[#cfe9ff] transition-all duration-300 pr-10" />
             <img src="/public/eye.png"
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-no-repeat bg-center cursor-pointer"
                 onclick="changePasswordVisibility()">
         </div>
-        <a href="/pages/login/register.html" class="text-blue-600 my-5">Não tem uma conta? Criar uma conta</a>
-        <button class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full">Login</button>
+        <a href="/pages/login/login.html" class="text-blue-600 my-5">Já tem uma conta? Faça login</a>
+        <button type="submit" class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full">Criar conta</button>
     </form>
     <script src="script.js"></script>
 </body>
