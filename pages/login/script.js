@@ -14,16 +14,17 @@ function changePasswordVisibility() {
 function login() {
     let userCpf = document.querySelector("#cpfInput").value;
     let userPassword = document.querySelector("#passwordInput").value;
+    //let isKeepingLogged = document.querySelector("#loggedCheckbox").checked;
 
     let user = localStorage.getItem(userCpf);
 
     if (user == null) {
         alert("CPF não registrado.");
     } else {
-        console.log(JSON.parse(user).userPassword + " " + userPassword);
         if (JSON.parse(user).userPassword != userPassword) {
             alert("Senha incorreta!");
         } else {
+            saveUserCredencials(user);
             document.location.href = "/pages/system/system.html";
         }
     }
@@ -45,6 +46,7 @@ function createAccount() {
 
     if (localStorage.getItem(userCpf) == null) {
         localStorage.setItem(userCpf, JSON.stringify(user));
+        saveUserCredencials(JSON.stringify(user))
         alert("Conta criada!");
         document.location.href = "/pages/system/system.html";
     } else {
@@ -52,6 +54,9 @@ function createAccount() {
     }
 }
 
+function saveUserCredencials(user){
+    localStorage.setItem("loggedUser", user);
+}
 
 if (document.querySelector("#loginForm")) {
     document.querySelector("#loginForm").addEventListener("submit", function (event) {
