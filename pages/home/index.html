@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemoweb</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
@@ -27,8 +27,8 @@
             </a>
         </div>
     </nav>
-    <section id="screen-1" class="bg-[#cfe9ff] h-fit pt-20 pt-32">
-        <div class="h-full w-full max-w-6xl mx-auto flex flex-col lg:flex-row">
+    <section id="screen-1" class="bg-[#cfe9ff] h-fit pt-32">
+        <div class="h-full w-full max-w-7xl mx-auto flex flex-col lg:flex-row">
             <div class="w-full lg:mx-auto px-5 lg:py-10">
                 <h1 class="text-3xl lg:text-5xl font-bold">Uma plataforma de unificação dos serviços de doação do Hemominas</h1>
                 <h2 class="text-lg lg:text-2xl mt-2">Uma nova forma de ajudar a salvar vidas!</h2>
@@ -45,31 +45,28 @@
             </div>       
          </div>
     </section>
-    <section id="screen-2" class="bg-[#075091] h-screen relative">
-        <div class="h-full w-full max-w-6xl mx-auto flex flex-col lg:flex-row">
-            <div class="w-full lg:mx-auto px-5 lg:py-10">
-                <h1 class="absolute inset-y-28 right-96 w-96 text-3xl lg:text-4xl font-bold text-white">O que é a Fundação Hemominas?</h1>
-                <h2 class="absolute inset-y-52 right-96 w-96 text-lg lg:text-1xl mt-2 font-bold text-white">Instituída em 26 de dezembro de 1989, através da Lei n° 10.057, a Fundação Centro de Hematologia e Hemoterapia do Estado de Minas Gerais - Hemominas, tem por finalidade garantir à população a oferta de sangue e hemoderivados de qualidade.</h2>
-                <h2 class="absolute inset-y-96 right-96 w-96 text-lg lg:text-1xl mt-2 font-bold text-white">A Fundação Hemominas desenvolve atividades nas áreas de prestação de serviço, assistência médica, ensino, pesquisa, desenvolvimento tecnológico, produção, controle de qualidade e educação sanitária.</h2>
-            </div>
-            <div class="w-64 flex ">
-                <div class="absolute inset-y-20">
-                    <img src="/public/prancheta.png" class="h-36">
-                </div>
-            </div>   
-            <div class="w-full grid-cols-1">
-                <div>
-                    <img src="/public/hemominas.png" class="h-full">
+    <section id="screen-2" class="bg-[#075091] h-fit w-full">
+        <div class="h-full w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row">
+            <img src="/public/doacao.jpg" class="w-full lg:w-1/2 h-auto object-cover">
+            <div class="flex flex-row w-full lg:w-1/2 pl-5 pb-10 lg:pb-20">
+                <div class="w-full">
+                    <div class="flex flex-row items-center pt-10">
+                        <h1 class="text-white text-2xl lg:text-4xl font-bold">O que é a fundação Hemominas?</h1>
+                        <img src="/public/prancheta.png" class="w-36 h-24 lg:h-32 lg:w-48">
+                    </div>
+                    <p class="text-white text-lg lg:text-xl pt-5 lg:pt-10 w-11/12">Instituída em 26 de dezembro de 1989, através da Lei n° 10.057, a Fundação Centro de Hematologia e Hemoterapia do Estado de Minas Gerais - Hemominas, tem por finalidade garantir à população a oferta de sangue e hemoderivados de qualidade.</p>
+                    <p class="text-white text-lg lg:text-xl pt-5 lg:pt-10 w-11/12">A Fundação Hemominas desenvolve atividades nas áreas de prestação de serviço, assistência médica, ensino, pesquisa, desenvolvimento tecnológico, produção, controle de qualidade e educação sanitária.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="screen-3" class="bg-white h-screen relative">
+    <section id="screen-3" class="bg-white h-screen">
         <div class="h-full w-full max-w-6xl mx-auto flex flex-col lg:flex-row">
 
         </div>
     </section>
-    <section id="screen-4" class="bg-[#075091] h-screen relative">
+    <section id="screen-4" class="bg-[#075091] h-screen">
         <div class="h-full w-full max-w-6xl mx-auto flex flex-col lg:flex-row">
 
         </div>
