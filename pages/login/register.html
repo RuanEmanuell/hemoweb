@@ -14,31 +14,58 @@
     <script src="/tailwind.config.js"></script>
 </head>
 
-<body class="bg-gradient-to-b from-blue-500 to-[#075091] h-screen w-full flex justify-center items-center">
-    <form id="createAccountForm" class="bg-white h-128 w-80 md:w-112 md:h-172 rounded flex flex-col justify-center items-center">
+<body class="bg-gradient-to-b from-blue-500 to-[#075091] h-fit sm:h-screen w-full flex justify-center items-center">
+    <form id="createAccountForm"
+        class="bg-white h-fit w-80 md:w-112 flex flex-col justify-center items-center rounded relative py-10">
         <h1 class="text-3xl md:text-5xl font-bold mb-10">CRIAR CONTA</h1>
         <p class="w-3/4">Nome</p>
-        <input id="nameInput" type="text" required minlength="2" class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
+        <input id="nameInput" type="text" required minlength="2"
+            class="w-3/4 border-b-2 focus:border-[#075091] transition-all duration-300 mb-5">
         <p class="w-3/4">CPF</p>
-        <input id="cpfInput" type="tel" required minlength="11" maxlength="11" class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
+        <input id="cpfInput" type="tel" required minlength="11" maxlength="11"
+            class="w-3/4 border-b-2 focus:border-[#075091] transition-all duration-300 mb-5">
         <p class="w-3/4">E-mail</p>
-        <input id="emailInput" type="email" required class="w-3/4 border-b-2 focus:border-[#cfe9ff] transition-all duration-300 mb-5">
+        <input id="emailInput" type="email" required
+            class="w-3/4 border-b-2 focus:border-[#075091] transition-all duration-300 mb-5">
         <p class="w-3/4">Senha</p>
         <div class="relative w-3/4 mb-5">
             <input id="passwordInput" type="password" required minlength="6"
-                class="w-full border-b-2 focus:border-[#cfe9ff] transition-all duration-300 pr-10" />
+                class="w-full border-b-2 focus:border-[#075091] transition-all duration-300 pr-10" />
             <img src="/public/eye.png"
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-no-repeat bg-center cursor-pointer"
                 onclick="changePasswordVisibility()">
         </div>
-        <div class="w-3/4 flex flex-row">
-            <input id="loggedCheckbox" type="checkbox" class="mr-2">
-            <label>Manter-se conectado</label>
-        </div>
+        <p class="w-3/4">Endereço</p>
+        <input id="adressInput" type="text" required minlength="10"
+            class="w-3/4 border-b-2 focus:border-[#075091] transition-all duration-300 mb-5">
+        <p class="w-3/4">Nascimento</p>
+        <input id="birthdayInput" type="date" required minlength="10"
+            class="w-3/4 border-b-2 focus:border-[#075091] transition-all duration-300 mb-5">
+        <p class="w-3/4">Tipo Sanguíneo</p>
+        <select id="bloodTypeInput" name="Tipo Sanguíneo" required
+            class="border-2 focus:border-[#075091] rounded-lg py-1 w-3/4 transition-all duration-300 mb-5">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <p class="w-3/4">Doador de Medula Óssea</p>
+        <select id="boneMarrowInput" name="Doador de Medula Óssea" required
+            class="border-2 focus:border-[#075091] rounded-lg py-1 w-3/4 transition-all duration-300">
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
         <a href="/pages/login/login.html" class="text-blue-600 my-5">Já tem uma conta? Faça login</a>
-        <button type="submit" class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full hover:bg-[#063d73]">Criar conta</button>
+        <button type="submit"
+            class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full hover:bg-[#063d73]">Criar
+            conta</button>
+        <img src="/public/logo.png" class="h-16 md:h-24 absolute left-0 bottom-0">
     </form>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>
