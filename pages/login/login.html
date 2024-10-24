@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/htmx.org@2.0.3"
         integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
         crossorigin="anonymous"></script>
-    <script src="/tailwind.config.js"></script>
+    <script src="../../tailwind.config.js"></script>
 </head>
 
 <body class="bg-gradient-to-b from-blue-500 to-[#075091] h-screen w-full flex justify-center items-center">
@@ -25,7 +25,7 @@
         <div class="w-3/4 mb-5 relative">
             <input id="passwordInput" type="password" required
                 class="w-full border-b-2 focus:border-[#cfe9ff] transition-all duration-300 pr-10" />
-            <img src="/public/eye.png"
+            <img src="../../public/eye.png"
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-no-repeat bg-center cursor-pointer"
                 onclick="changePasswordVisibility()">
         </div>
@@ -33,12 +33,12 @@
             <input id="loggedCheckbox" type="checkbox" class="mr-2">
             <label>Manter-se conectado</label>
         </div>
-        <a href="/pages/login/register.html" class="text-blue-600 my-5">Não tem uma conta? Criar uma conta</a>
+        <a href="./register.html" class="text-blue-600 my-5">Não tem uma conta? Criar uma conta</a>
         <button
             class="bg-[#075091] h-10 w-36 xl:w-56 text-white font-bold rounded-full hover:bg-[#063d73]">Login</button>
-        <img src="/public/logo.png" class="h-16 md:h-24 absolute left-0 bottom-0">
+        <img src="../../public/logo.png" class="h-16 md:h-24 absolute left-0 bottom-0">
     </form>
-    <script src="login.js"></script>
+    <script src="./login.js"></script>
 </body>
 
 </html>

@@ -17,57 +17,58 @@
 <body>
     <div class="w-full h-full flex flex-col lg:flex-row">
         <nav class="bg-[#075091] w-full h-14 fixed lg:hidden flex flex-row justify-evenly">
-            <a class="flex items-center" href="/pages/system/posts.html">
-                <img src="/public/icons/home.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/posts.html">
+                <img src="../../public/icons/home.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/notifications.html">
-                <img src="/public/icons/notifications.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/notifications.html">
+                <img src="../../public/icons/notifications.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/schedules.html">
-                <img src="/public/icons/schedule.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/schedules.html">
+                <img src="../../public/icons/schedule.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/history.html">
-                <img src="/public/icons/history.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/history.html">
+                <img src="../../public/icons/history.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/profile.html">
-                <img src="/public/icons/profile.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/profile.html">
+                <img src="../../public/icons/profile.png" class="w-10 h-10 ml-2">
             </a>
             <button class="flex items-center" onclick="loggoutUser()">
-                <img src="/public/icons/exit.png" class="w-10 h-10 ml-2">
+                <img src="../../public/icons/exit.png" class="w-10 h-10 ml-2">
             </button>
         </nav>
         <nav class="bg-[#075091] w-full max-w-72 min-h-screen h-fit hidden lg:flex flex-col relative">
-            <img src="/public/logo-2.png" class="w-2/3 md:w-1/3">
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/posts.html">
-                <img src="/public/icons/home.png" class="w-10 h-10 ml-2">
+            <img src="../../public/logo-2.png" class="w-2/3 md:w-1/3">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/posts.html">
+                <img src="../../public/icons/home.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Página Inicial</h2>
             </a>
-            <a class="bg-[#3973A7] w-full h-20 flex flex-row items-center" href="/pages/system/notifications.html">
-                <img src="/public/icons/notifications.png" class="w-10 h-10 ml-2">
+            <a class="bg-[#3973A7] w-full h-20 flex flex-row items-center" href="../../pages/system/notifications.html">
+                <img src="../../public/icons/notifications.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Notificações</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/schedules.html">
-                <img src="/public/icons/schedule.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/schedules.html">
+                <img src="../../public/icons/schedule.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Agendamento</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/history.html">
-                <img src="/public/icons/history.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/history.html">
+                <img src="../../public/icons/history.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Histórico</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/profile.html">
-                <img src="/public/icons/profile.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/profile.html">
+                <img src="../../public/icons/profile.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Perfil</h2>
             </a>
             <div class="w-full md:absolute md:bottom-10 flex justify-center py-5 md:py-0">
-                <button class="bg-[#dc4e4f] w-11/12 text-white font-bold rounded-full h-12" onclick="loggoutUser()">SAIR</button>
+                <button class="bg-[#dc4e4f] w-11/12 text-white font-bold rounded-full h-12"
+                    onclick="loggoutUser()">SAIR</button>
             </div>
         </nav>
         <div class="bg-[#cfe9ff] w-full h-screen overflow-y-scroll pt-8 lg:pt-0" id="notificationsPage">
             <h1 class="text-[#075091] text-3xl lg:text-6xl font-bold text-center my-8">Notificações</h1>
         </div>
     </div>
-    <script src="/script.js"></script>
-    <script src="history.js"></script>
+    <script src="../../script.js"></script>
+    <script src="./notifications.js"></script>
 </body>
 
 </html>

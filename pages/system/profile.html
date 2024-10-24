@@ -17,45 +17,45 @@
 <body>
     <div class="w-full h-full flex flex-col lg:flex-row">
         <nav class="bg-[#075091] w-full h-14 fixed lg:hidden flex flex-row justify-evenly">
-            <a class="flex items-center" href="/pages/system/posts.html">
-                <img src="/public/icons/home.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/posts.html">
+                <img src="../../public/icons/home.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/notifications.html">
-                <img src="/public/icons/notifications.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/notifications.html">
+                <img src="../../public/icons/notifications.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/schedules.html">
-                <img src="/public/icons/schedule.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/schedules.html">
+                <img src="../../public/icons/schedule.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/history.html">
-                <img src="/public/icons/history.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/history.html">
+                <img src="../../public/icons/history.png" class="w-10 h-10 ml-2">
             </a>
-            <a class="flex items-center" href="/pages/system/profile.html">
-                <img src="/public/icons/profile.png" class="w-10 h-10 ml-2">
+            <a class="flex items-center" href="../../pages/system/profile.html">
+                <img src="../../public/icons/profile.png" class="w-10 h-10 ml-2">
             </a>
             <button class="flex items-center" onclick="loggoutUser()">
-                <img src="/public/icons/exit.png" class="w-10 h-10 ml-2">
+                <img src="../../public/icons/exit.png" class="w-10 h-10 ml-2">
             </button>
         </nav>
         <nav class="bg-[#075091] w-full max-w-72 min-h-screen h-fit hidden lg:flex flex-col relative">
-            <img src="/public/logo-2.png" class="w-2/3 md:w-1/3">
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/posts.html">
-                <img src="/public/icons/home.png" class="w-10 h-10 ml-2">
+            <img src="../../public/logo-2.png" class="w-2/3 md:w-1/3">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/posts.html">
+                <img src="../../public/icons/home.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Página Inicial</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/notifications.html">
-                <img src="/public/icons/notifications.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/notifications.html">
+                <img src="../../public/icons/notifications.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Notificações</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/schedules.html">
-                <img src="/public/icons/schedule.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/schedules.html">
+                <img src="../../public/icons/schedule.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Agendamento</h2>
             </a>
-            <a class="w-full h-20 flex flex-row items-center" href="/pages/system/history.html">
-                <img src="/public/icons/history.png" class="w-10 h-10 ml-2">
+            <a class="w-full h-20 flex flex-row items-center" href="../../pages/system/history.html">
+                <img src="../../public/icons/history.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Histórico</h2>
             </a>
-            <a class="bg-[#3973A7] w-full h-20 flex flex-row items-center" href="#">
-                <img src="/public/icons/profile.png" class="w-10 h-10 ml-2">
+            <a class="bg-[#3973A7] w-full h-20 flex flex-row items-center" href="../../pages/system/profile.html">
+                <img src="../../public/icons/profile.png" class="w-10 h-10 ml-2">
                 <h2 class="text-white text-md md:text-xl font-bold ml-2">Perfil</h2>
             </a>
             <div class="w-full md:absolute md:bottom-10 flex justify-center py-5 md:py-0">
@@ -66,7 +66,7 @@
         <div class="bg-[#cfe9ff] w-full h-screen overflow-y-scroll pt-8 lg:pt-0 flex flex-col items-center"
             id="profilePage">
             <h1 class="text-[#075091] text-3xl lg:text-6xl font-bold text-center my-8">Perfil</h1>
-            <img src="/public/icons/account.png" class="w-32 h-32 lg:h-64 lg:w-64 mt-4">
+            <img src="../../public/icons/account.png" class="w-32 h-32 lg:h-64 lg:w-64 mt-4">
             <div class="w-full grid grid-cols-2 lg:grid-cols-3 justify-center mx-4 my-8 max-w-3xl lg:mx-auto">
                 <div class="w-full flex flex-col px-4 col-span-2">
                     <p class="text-[#075091] font-bold w-full">Nome completo</p>
@@ -88,7 +88,7 @@
                     <div class="relative w-full mb-5">
                         <input id="passwordInput" type="password" required minlength="6" disabled
                             class="w-full border-b-2 focus:border-[#075091] transition-all duration-300 pr-10 h-8 disabled:bg-gray-200 disabled:border-0" />
-                        <img src="/public/eye.png"
+                        <img src="../../public/eye.png"
                             class="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-no-repeat bg-center cursor-pointer"
                             onclick="changePasswordVisibility()">
                     </div>
@@ -133,8 +133,8 @@
             </div>
         </div>
     </div>
-    <script src="/script.js"></script>
-    <script src="profile.js"></script>
+    <script src="../../script.js"></script>
+    <script src="./profile.js"></script>
 </body>
 
 </html>

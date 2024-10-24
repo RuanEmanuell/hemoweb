@@ -21,7 +21,7 @@ let posts = [
     },
 ]
 
-if(localStorage.getItem("posts") == null){
+if (localStorage.getItem("posts") == null) {
     localStorage.setItem("posts", JSON.stringify(posts));
 } else {
     posts = JSON.parse(localStorage.getItem("posts"));
@@ -30,28 +30,29 @@ if(localStorage.getItem("posts") == null){
 let postsPage = document.querySelector("#postsPage");
 
 for (var i = 0; i < posts.length; i++) {
-    postsPage.insertAdjacentHTML("beforeend", `<div class = "bg-white flex flex-col w-11/12 lg:w-2/3 max-w-lg mx-auto rounded-xl my-10 py-4">
-                                                <div class ="flex flex-row px-4">
-                                                    <img src="${posts[i]['userImage']}" class="w-16 h-auto border-2 border-[#075091] rounded-full">
-                                                    <h4 class="text-[#075091] font-bold ml-2">${posts[i]['userName']}</h4>
-                                                    <h4 class="text-gray-500 font-bold ml-2">• ${posts[i]['postDays']}d</h4>
-                                                </div>
-                                                <p class="my-2 px-4">${posts[i]["postDescription"]}</p>
-                                                <img src="${posts[i]["postImage"]}" class="h-96 w-auto object-cover">
-                                                <button class="flex flex-row items-center mt-4 ml-4 cursor-pointer" onclick="likePost(${i})">
-                                                    <img id="liked${i}" src=${posts[i]["postLiked"] ? "/public/icons/water_liked.png" : "/public/icons/water.png"} class="h-8 w-8">
-                                                    <p id="likes${i}">${posts[i]["postLikes"]}</p>
-                                                </button>
+    postsPage.insertAdjacentHTML("beforeend",
+                                                `<div class = "bg-white flex flex-col w-11/12 lg:w-2/3 max-w-lg mx-auto rounded-xl my-10 py-4">
+                                                    <div class ="flex flex-row px-4">
+                                                        <img src="${posts[i]['userImage']}" class="w-16 h-auto border-2 border-[#075091] rounded-full">
+                                                        <h4 class="text-[#075091] font-bold ml-2">${posts[i]['userName']}</h4>
+                                                        <h4 class="text-gray-500 font-bold ml-2">• ${posts[i]['postDays']}d</h4>
+                                                    </div>
+                                                    <p class="my-2 px-4">${posts[i]["postDescription"]}</p>
+                                                    <img src="${posts[i]["postImage"]}" class="h-96 w-auto object-cover">
+                                                    <button class="flex flex-row items-center mt-4 ml-4 cursor-pointer" onclick="likePost(${i})">
+                                                        <img id="liked${i}" src=${posts[i]["postLiked"] ? "../../public/icons/water_liked.png" : "../../public/icons/water.png"} class="h-8 w-8">
+                                                        <p id="likes${i}">${posts[i]["postLikes"]}</p>
+                                                    </button>
                                                 </div>`)
 }
 
-function likePost(index){
-    if(posts[index]["postLiked"] == false){
+function likePost(index) {
+    if (posts[index]["postLiked"] == false) {
         posts[index]["postLikes"] += 1;
-        document.querySelector(`#liked${index}`).src = "/public/icons/water_liked.png";
+        document.querySelector(`#liked${index}`).src = "../../public/icons/water_liked.png";
     } else {
         posts[index]["postLikes"] -= 1;
-        document.querySelector(`#liked${index}`).src = "/public/icons/water.png";
+        document.querySelector(`#liked${index}`).src = "../../public/icons/water.png";
     }
 
     posts[index]["postLiked"] = !posts[index]["postLiked"];

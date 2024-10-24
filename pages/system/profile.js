@@ -1,3 +1,5 @@
+verifyUser();
+
 let passwordVisible = false;
 let editMode = false;
 
@@ -58,11 +60,6 @@ function saveUserInfo() {
 function revertUserInfo(){
     getUserInfo();
     setEditMode();
-}
-
-function loggoutUser() {
-    localStorage.removeItem("loggedUser");
-    document.location.href = "/pages/login/login.html";
 }
 
 function setEditMode() {

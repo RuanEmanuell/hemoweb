@@ -24,7 +24,7 @@ function login() {
             alert("Senha incorreta!");
         } else {
             saveUserCredencials(user);
-            document.location.href = "/pages/system/posts.html";
+            document.location.href = "../../pages/system/posts.html";
         }
     }
 }
@@ -54,7 +54,7 @@ function createAccount() {
     if (localStorage.getItem(userCpf) == null) {
         localStorage.setItem(userCpf, JSON.stringify(user));
         saveUserCredencials(JSON.stringify(user))
-        document.location.href = "/pages/system/posts.html";
+        document.location.href = "../../pages/system/posts.html";
     } else {
         alert("CPF já registrado");
     }
