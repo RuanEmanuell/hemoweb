@@ -38,6 +38,7 @@ function createAccount() {
     let userAdress = document.querySelector("#adressInput").value;
     let userBirthday = document.querySelector("#birthdayInput").value;
     let userBloodType = document.querySelector("#bloodTypeInput").value;
+    let userBoneMarrowDonator = document.querySelector("#boneMarrowInput").value;
 
     let user = {
         name: userName,
@@ -46,7 +47,8 @@ function createAccount() {
         password: userPassword,
         adress: userAdress,
         birthday: userBirthday,
-        bloodType: userBloodType
+        bloodType: userBloodType,
+        boneMarrowDonator: userBoneMarrowDonator
     }
 
     if (localStorage.getItem(userCpf) == null) {
