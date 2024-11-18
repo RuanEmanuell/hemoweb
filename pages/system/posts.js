@@ -11,7 +11,6 @@ function loggoutUser(){
     document.location.href = "../../pages/login/login.html";
 }
 
-
 let posts = [
     {
         userName: "Hemominas (Sede Juiz de Fora)",
@@ -31,6 +30,33 @@ let posts = [
         postLikes: 299,
         postLiked: false
     },
+    {
+        userName: "Hemominas (Sede Uberlândia)",
+        userImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak1MleIgg2unZQLw4EB0VVMAudvkseQPuLg&s",
+        postDays: 2,
+        postDescription: "Hoje recebemos alunos de escolas da região para uma palestra sobre a importância da doação de sangue. Um momento especial de aprendizado e conscientização.",
+        postImage: "https://s2-g1.glbimg.com/ljVsnRGI4NedLynnhlyjkA8nKzI=/0x0:2560x2105/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/4/a/5ZPMUWS76CqY9uCe24Aw/educacao-reforca-cpf.jpg",
+        postLikes: 87,
+        postLiked: false
+    },
+    {
+        userName: "Hemominas (Sede Montes Claros)",
+        userImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak1MleIgg2unZQLw4EB0VVMAudvkseQPuLg&s",
+        postDays: 3,
+        postDescription: "Venha doar sangue e ajude a salvar vidas! Nosso hemocentro está de portas abertas para receber você. Juntos, podemos fazer a diferença.",
+        postImage: "https://atreus-prd.qconcursos.com/articles/images/5fe2c3a4-a8a0-46cc-93d6-4b96f8876ee5/concurso-hemominas-mg-2023.JPG",
+        postLikes: 210,
+        postLiked: false
+    },
+    {
+        userName: "Hemominas (Sede Uberaba)",
+        userImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak1MleIgg2unZQLw4EB0VVMAudvkseQPuLg&s",
+        postDays: 5,
+        postDescription: "Agradecemos a todos que participaram da campanha especial desta semana. Mais de 300 bolsas de sangue foram coletadas! Um gesto de solidariedade que faz toda a diferença.",
+        postImage: "https://setelagoas.com.br/wp-content/uploads/2016/04/bolsas-de-sague-6.jpg",
+        postLikes: 450,
+        postLiked: false
+    }
 ]
 
 if (localStorage.getItem("posts") == null) {
