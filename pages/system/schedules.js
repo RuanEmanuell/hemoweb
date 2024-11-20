@@ -43,23 +43,27 @@ for (var i = 0; i < 12; i++) {
         </button>`)
 }
 
-
 function submitSchedule(){
     let selectedDate = document.querySelector("#dateInput").value;
+
+    selectedDate = selectedDate.substring(8, 10) + "/" + selectedDate.substring(5, 7) + "/" + selectedDate.substring(0, 4);
+
     let selectedHour = userSelectedHour;
     let selectedLocation = document.querySelector("#locationInput").value;
 
     if(selectedHour != undefined && selectedDate){
+        const keys = Object.keys(localStorage).filter(key => key.startsWith('schedule:'));
+        const schedules = keys.map(key => JSON.parse(localStorage.getItem(key)));
+
         let schedule = {
+            id: schedules.length + 1,
             date: selectedDate,
             hour: selectedHour,
             location: selectedLocation
         }
 
-        const keys = Object.keys(localStorage).filter(key => key.startsWith('schedule:'));
-        const schedules = keys.map(key => JSON.parse(localStorage.getItem(key)));
-
-        localStorage.setItem(`schedule:${schedules.length}`, JSON.stringify(schedule));
+        localStorage.setItem(`schedule:${schedule.id}`, JSON.stringify(schedule));
+        location.href = "history.html";
     } else {
         alert("Escolha um mês/dia e um horário!");
     }
