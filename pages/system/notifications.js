@@ -31,12 +31,12 @@ let notifications = [
     },
 ]
 
-let notificationsPage = document.querySelector("#notificationsPage");
+let notificationsSection = document.querySelector("#notificationsSection");
 
 function readNotification(i) {
     notifications[i].read = true;
     localStorage.setItem("notifications", JSON.stringify(notifications));
-    notificationsPage.innerHTML = "";
+    notificationsSection.innerHTML = "";
     getNotifications();
 }
 
@@ -48,7 +48,7 @@ function getNotifications() {
     }
 
     for (var i = 0; i < notifications.length; i++) {
-        notificationsPage.insertAdjacentHTML("beforeend",
+        notificationsSection.insertAdjacentHTML("beforeend",
             `<div class = "${notifications[i].read ? 'bg-white' : 'bg-blue-300'} flex flex-col w-11/12 lg:w-2/3 max-w-lg mx-auto rounded-xl my-10 py-4">
                                                         <div class ="flex flex-row px-4">
                                                             <div class="flex flex-row w-full">
