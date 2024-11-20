@@ -65,9 +65,44 @@
         </nav>
         <div class="bg-[#cfe9ff] w-full h-screen overflow-y-scroll pt-8 lg:pt-0" id="schedulesPage">
             <h1 class="text-[#075091] text-3xl lg:text-6xl font-bold text-center my-8">Agendamento</h1>
+            <div class="w-full h-full flex flex-col max-w-6xl mx-auto items-center" id="scheduleForm">
+                <div class="bg-white w-11/12 h-32 rounded-lg mb-10 flex flex-col items-center">
+                    <h1 class="text-[#075091] text-xl lg:text-3xl font-bold text-center mt-2 mb-4">Mês e dia</h1>
+                    <input id="dateInput" type="date" required minlength="10"
+                        class="w-32 border-b-2 focus:border-[#075091] transition-all duration-300 mt-2">
+                </div>
+                <div class="bg-white w-11/12 h-fit rounded-lg mb-10 pb-8">
+                    <h1 class="text-[#075091] text-xl lg:text-3xl font-bold text-center mt-2 mb-4">Horários disponíveis
+                    </h1>
+                    <div class="w-full flex items-center">
+                        <div class="w-full h-full grid grid-rows-4 grid-cols-3 lg:grid-rows-2 lg:grid-cols-6" id="availableSchedules">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white w-11/12 h-28 rounded-lg mb-10 flex flex-col items-center">
+                    <h1 class="text-[#075091] text-xl lg:text-3xl font-bold text-center mt-2 mb-4">Localização</h1>
+                    <select id="locationInput" name="Localizaçãoo" required
+                        class="border-2 focus:border-[#075091] rounded-lg py-1 w-3/4 transition-all duration-300 mb-5">
+                        <option
+                            value="Rua Barão de Cataguases, s/n - Bairro: Centro - Cep: 36015-370 (Juiz de Fora)">
+                            Rua Barão de Cataguases, s/n - Bairro: Centro - Cep: 36015-370 (Juiz de Fora)
+                        </option>
+                        <option
+                            value="Alameda Ezequiel Dias, 321 - Bairro: Santa Efigênia - Cep: 3013011 (Belo Horizonte)">
+                            Alameda Ezequiel Dias, 321 - Bairro: Santa Efigênia - Cep: 3013011 (Belo Horizonte)
+                        </option>
+                        <option
+                            value="Av. Getúlio Guaritá, 250 - Bairro: Nossa Sra. da Abadia, Uberaba - MG - Cep: 38025-440 (Uberaba)">
+                            Av. Getúlio Guaritá, 250 - Bairro: Nossa Sra. da Abadia, Uberaba - MG - Cep: 38025-440 (Uberaba)
+                        </option>
+                    </select>
+                </div>
+                <button class="bg-[#075091] h-10 w-48 xl:w-56 text-white font-bold rounded-full hover:bg-[#063d73] m-2" onclick="submitSchedule()">NOVO AGENDAMENTO</button>
+            </div>
         </div>
     </div>
-    <script src="./history.js"></script>
+    <script src="./schedules.js"></script>
 </body>
 
 </html>
