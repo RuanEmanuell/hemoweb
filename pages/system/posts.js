@@ -79,7 +79,7 @@ for (var i = 0; i < posts.length; i++) {
                                                     <img src="${posts[i]["postImage"]}" class="h-96 w-auto object-cover">
                                                     <button class="flex flex-row items-center mt-4 ml-4 cursor-pointer" onclick="likePost(${i})">
                                                         <img id="liked${i}" src=${posts[i]["postLiked"] ? "../../public/icons/water_liked.png" : "../../public/icons/water.png"} class="h-8 w-8">
-                                                        <p id="likes${i}">${posts[i]["postLikes"]}</p>
+                                                        <p id="likes${i}" class="${posts[i]["postLiked"] ? "font-bold text-red-500" : "text-blue-800"}">${posts[i]["postLikes"]}</p>
                                                     </button>
                                                 </div>`)
 }
@@ -88,9 +88,13 @@ function likePost(index) {
     if (posts[index]["postLiked"] == false) {
         posts[index]["postLikes"] += 1;
         document.querySelector(`#liked${index}`).src = "../../public/icons/water_liked.png";
+        document.querySelector(`#likes${index}`).classList.add("font-bold", "text-red-500");
+        document.querySelector(`#likes${index}`).classList.remove("text-blue-800");
     } else {
         posts[index]["postLikes"] -= 1;
         document.querySelector(`#liked${index}`).src = "../../public/icons/water.png";
+        document.querySelector(`#likes${index}`).classList.remove("font-bold", "text-red-500");
+        document.querySelector(`#likes${index}`).classList.add("text-blue-800");
     }
 
     posts[index]["postLiked"] = !posts[index]["postLiked"];
